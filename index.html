@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Notes App</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <!--Wrapped Everything except the pop up section-->
+   <div class="wrapper" id="body">
+      <h1>Sticky Notes</h1>
+      
+      <!--Creating Note Section-->
+      <div class="add-Note">
+         <button id="createBtn">Create Note</button>
+      </div>
+
+      <!--Created Notes are displayed here-->
+      
+      <div id="displayGrid">
+         <div class="note-main">
+            <div class="note-text">
+               <pre>Lorum Ipsum achchige redd</pre>
+            </div>
+            <div class="note-btns">
+               <button id="delete">Delete</button>
+            </div>
+         </div>
+      </div>
+
+   </div>  
+
+   <!--Popup section for creating & adding notes-->
+   <div class="popup">
+      <textarea name="text" id="textbox" cols="30" rows="15" maxlength="100"></textarea>
+      <div class="btn-grid">
+         <button id="addBtn">Add</button>
+         <button id="close">x</button>
+         <input type="color" id="color" name="color" value="#ff0000">
+      </div>      
+   </div>
+
+   <div class="popup-two">
+      <button id="close-show">x</button>
+   </div>
+
+   <script src="app.js"></script>
+</body>
+</html>
