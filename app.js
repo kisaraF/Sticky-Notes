@@ -83,7 +83,7 @@ function showThis(el) {
    let copy = el.childNodes[0].textContent;
    //console.log(copy);
    let colorBox= el.style.backgroundColor;
-   console.log(colorBox);
+   //console.log(colorBox);
    messageBox.textContent= copy;
    messageBox.style.overflow = 'visible';
    const white= 'rgb(255, 255, 255)';
