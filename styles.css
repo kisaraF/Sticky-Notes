@@ -16,7 +16,7 @@ h1{
    text-align: center;
 }
 
-#createBtn, #addBtn, #close{   
+#createBtn, #addBtn, #close, #delete{   
    border: 0;
    padding: 0.5em 1em;
 }
@@ -32,11 +32,11 @@ h1{
 }
 
 #close{
-   background-color: #C04349;
+   background-color: #c04349;
    color: white;
 }
 
-#createBtn:hover, #addBtn:hover, #close:hover{
+#createBtn:hover, #addBtn:hover, #close:hover, #delete:hover{
    cursor: pointer;
 }
 
@@ -82,7 +82,18 @@ h1{
    #displayGrid{
       display: block;
       margin: auto;
-      width: 50%;
+      width: 100%;
    }
 }
 
+#delete{
+   border: 0;
+   background-color: #c04349;
+   color: #fff;
+   border-radius: 7px;
+   margin-top: 1em;
+}
+
+#message{
+   padding: 1.5em;
+}

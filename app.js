@@ -7,6 +7,7 @@ let addBtn = document.getElementById('addBtn');
 let textBox = document.getElementById('textbox');
 let displaySec = document.querySelector('.popup-two');
 let closeShow = document.getElementById('close-show');
+let messageBox= document.getElementById('message');
 
 createBtn.addEventListener('click', openPopup);
 closeBtn.addEventListener('click', closePopup);
@@ -79,10 +80,20 @@ function showThis(el) {
    body.style.filter = "blur(8px)";
    displaySec.style.display= 'block';
    //console.log(el);
-   let copy = el.cloneNode(true);/*
-   copy.style.overflow = 'visible';
-   copy.style.width= '70%';*/
-   displaySec.appendChild(copy);
+   let copy = el.childNodes[0].textContent;
+   //console.log(copy);
+   let colorBox= el.style.backgroundColor;
+   console.log(colorBox);
+   messageBox.textContent= copy;
+   messageBox.style.overflow = 'visible';
+   const white= 'rgb(255, 255, 255)';
+   if(colorBox== white){
+      messageBox.style.color= "#000";
+   }else{
+      messageBox.style.color = "#fff";
+   }
+   messageBox.style.backgroundColor= colorBox;
+   displaySec.appendChild(messageBox);
 }
 
 function closeIt(){
